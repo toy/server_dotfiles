@@ -1,0 +1,14 @@
+# set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set completion-ignore-case On
+set completion-query-items 200
+set input-meta on
+set output-meta on
+
+# Space: magic-space
+
+"\e[5C": forward-word
+"\e[5D": backward-word
+
+"\C-f": history-search-backward
+"\C-g": history-search-forward
