@@ -5,7 +5,7 @@ def load_app_files_for_completions
   Readline.completion_proc = proc{ |input|
     (Pathname.glob('app/**/*.rb') + Pathname.glob('lib/**/*.rb')).each do |rb|
       begin
-        rb.basename('.rb').classify.constantize
+        rb.basename('.rb').to_s.classify.constantize
       rescue NameError
       end
     end
