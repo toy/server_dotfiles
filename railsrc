@@ -1,13 +1,13 @@
+require 'pathname'
+
 def load_app_files_for_completions
   original_completion_proc = Readline.completion_proc
   Readline.completion_proc = proc{ |input|
-    begin
-      old_verbose, $VERBOSE = $VERBOSE, nil
-      (Dir.glob('app/**/*.rb') + Dir.glob('lib/**/*.rb')).each do |rb|
-        require rb
+    (Pathname.glob('app/**/*.rb') + Pathname.glob('lib/**/*.rb')).each do |rb|
+      begin
+        rb.basename('.rb').classify.constantize
+      rescue NameError
       end
-    ensure
-      $VERBOSE = old_verbose
     end
 
     Readline.completion_proc = original_completion_proc
@@ -21,8 +21,7 @@ def r
   ret
 end
 
-def sql(query)
-  ActiveRecord::Base.connection.select_all(query)
+Thread.new do
+  sleep 0.1 until Readline.completion_proc
+  load_app_files_for_completions
 end
-
-load_app_files_for_completions
