@@ -9,6 +9,7 @@ export CLICOLOR=1
 alias man!='man -P cat'
 alias la='ls -lAh'
 alias md5='md5 -r'
+alias rcon='script/console'
 
 # completions
 _gem(){
