@@ -1,4 +1,4 @@
-source ~/.bashrc
+. ~/.bashrc
 
 PS1='\[\033[1;34m\]\W\[\033[0m\]\$ ' # '<blue>path</blue> $ '
 export EDITOR='vim'
