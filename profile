@@ -5,11 +5,16 @@ export EDITOR='vim'
 export HISTCONTROL=ignoredups
 export HISTSIZE=5000
 export CLICOLOR=1
+export LESS='-R'
+export MANPAGER='ul | cat -s'
 
 alias man!='man -P cat'
 alias la='ls -lAh'
 alias md5='md5 -r'
+alias rgen='script/generate'
 alias rcon='script/console'
+alias mkpath='mkdir -p'
+alias myip='curl whatismyip.org'
 
 # completions
 _gem(){
