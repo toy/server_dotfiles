@@ -1,0 +1,16 @@
+[color]
+	diff = auto
+	branch = auto
+	status = always
+[alias]
+	d = "diff -b"
+	s = "status"
+	a = "add -A"
+
+	br = "branch"
+	ci = "commit"
+	co = "checkout"
+	cp = "cherry-pick"
+	di = "diff"
+	mt = "mergetool"
+	st = "status"
