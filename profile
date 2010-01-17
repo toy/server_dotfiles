@@ -1,6 +1,6 @@
 source ~/.bashrc
 
-PS1='\[\033[1;31m\]\W\[\033[0m\]\$ ' # '<red>path</red> $ '
+PS1='\[\033[1;34m\]\W\[\033[0m\]\$ ' # '<blue>path</blue> $ '
 export EDITOR='vim'
 export HISTCONTROL=ignoredups
 export HISTSIZE=5000
